@@ -1,0 +1,209 @@
+//https://www.freecodecamp.org/portuguese/news/como-centralizar-uma-imagem-na-vertical-e-na-horizontal-com-css/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+ul{
+    list-style: none; 
+}
+
+body {
+    background-image: url("../assets/Img1.jpg");
+    background-position: top center;
+    background-size: 100% auto;  
+    background-repeat: no-repeat;
+    background-color: #0B0720;
+}
+
+body * {
+    font-family: 'Silkscreen', cursive;
+    /*font-family: 'Inter', sans-serif;*/
+    line-height: 160%;
+}
+
+header{
+    padding-top: 40px;
+    height: calc(120px+80px);
+}
+
+header div{
+    width: 220px;
+    margin: auto;
+    background-image: linear-gradient(90deg,#6114b7 0%, #7aacf3 10%, #da44f9 25%, #6114b7 50%, #da44f9 75%,#7aacf3 90%, #6114b7 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 6px;
+    
+    transition: transform .6s;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+header div img{
+    width: 100%;
+    border-radius:50%;
+}
+
+main{
+    max-width: 880px;
+    width: 85%;
+    margin: 40px auto;
+    display: grid;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+section{
+    color: white;
+    background-image: linear-gradient(90deg,#6114b7 0%, #7aacf3 10%, #da44f9 25%, #6114b7 50%, #da44f9 75%,#7aacf3 90%, #6114b7 100%);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 10px;
+}
+
+section div{
+    background-color: #310d6a;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 10px;
+}
+
+section h2{
+    text-align: center;
+    letter-spacing: -0.47px;
+    color: #7C7EFF;
+    padding-bottom: 12px;
+}
+
+section p{
+    text-align: center;
+    letter-spacing: -0.38px;    
+    color: #CFCDFF;
+}
+
+section ul{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+}
+
+section ul li{
+    transition: transform .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
+.projects-list img{
+    width: 125px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+}
+
+.languages-list img{
+    border-radius: 50%;
+    max-width:65px;
+    max-height:65px;
+    width: auto;
+    height: auto;
+    border: 2px solid white;
+}
+
+.program-list img{
+    border-radius: 50%;
+    max-width:58px;
+    max-height:58px;
+    width: auto;
+    height: auto;
+    //border: 2px solid white;
+}
+
+.social-list img{
+    max-width:58px;
+    max-height:58px;
+    width: auto;
+    height: auto;
+}
+
+.about-me{
+    
+}
+
+header div{
+    animation: circle 1.4s .5s backwards;
+}
+
+main section{
+    animation: fromBOTTON 1.8s .9s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: .4s;
+}
+
+main section:nth-child(2){
+    animation-delay: .8s;
+}
+
+main section:nth-child(3){
+    animation-delay: 1.2s;
+}
+
+main section:nth-child(4){
+    animation-delay: 1.6s;
+}
+
+main section:nth-child(5){
+    animation-delay: 2.0s;
+}
+
+// Animation
+//pode ser 0% to 100%
+
+@keyframes trash{
+
+}
+
+@keyframes fromBOTTON{
+    from{
+        opacity: 0;
+        //transform: translateY(80px);
+        transform: translateX(-200px)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+        transform: translateX(0px)
+    }
+}
+
+@keyframes circle{
+    from{
+        transform:
+        rotate(-250deg) translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform:
+        rotate(0deg) translateY(0%);
+      opacity: 1;
+    }
+}
+
+
+
+
+
